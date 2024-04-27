@@ -1,16 +1,24 @@
-# grammY-bot-template
+# topanime-tg-bot
 
-A boilerplate template that applies the GrammY framework to help you get started with the Telegram bot.
+View seasonal weekly anime charts, news, articles and more in your Telegram chat.
 
 ## Features
 
-* Structured & modularized code practice
-* TypeScript & ESLint 
-* Mongodb(Mongoose&Typegoose) support
+![](./docs/assets/preview.png)
+
+
 
 ## Startup
 
-Rename `.env.example` to `.env`, replace values of `BOT_TOKEN` and `USER_CHAT_ID`  to yours.
+1. Rename `.env.example` to `.env`, replace values of `BOT_TOKEN` and `USER_CHAT_ID`  to yours.
+
+If you want to use bot in group, you need to get your group chatid.
+
+2. Rename `topAnime.json.example` to `topAnime.json`, put it under `data` folder in root directory, be aware this file is ignored by git by default.
+
+3. Run `npm install` to install dependencies.
+
+4. Run `npm run dev` to start the bot in development mode. 
 
 ### How to create a Telegram chatbot yourself?
 
@@ -30,13 +38,5 @@ Add [Bot Father](https://telegram.me/BotFather) to your contact, use `/newbot` c
 * `/start` Welcome text
 * `/help` Show help text
 * `/settings` Open settings
-* `/wallpaper` Get a random wallpaper from Unsplash(need to fill in access token in .env file under root directory)
-
-> To enable the `/wallpaper` command, you need to apply a [unsplah api key](https://unsplash.com/documentation) and insert it into `.env`
-
+* `/topanime` Get [TOP 10 anime](https://www.anitrendz.com/charts/top-anime) and send to your chat. 
 * `/about` Show information about the bot
-
-## Thanks to
-
-<https://github.com/grammyjs/grammY>
-<https://github.com/ShoroukAziz/notion-potion>
