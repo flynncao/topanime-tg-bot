@@ -82,7 +82,6 @@ const menuList: AtomicMenu[] = [
       {
         text: 'Greet me',
         callback: async (ctx: MyContext) => {
-          console.log('greet me callback called')
           return `Greet ${ctx.from?.first_name ?? 'me'}!`
         },
         handler: async (ctx: MyContext) => {
@@ -142,7 +141,6 @@ const menuList2 = [
 ]
 
 function sharedIdent(): string {
-  console.log('object :>> ', store.dashboardFingerprint)
   return store.dashboardFingerprint
 }
 
@@ -201,7 +199,6 @@ export function createAllMenus() {
 
 async function getRandomIntFromInternet(max: number = 5): Promise<number> {
   return new Promise((resolve, reject) => {
-    console.log('getting range')
     setTimeout(() => {
       const num = Math.floor(Math.random() * max)
       resolve(num === 0 ? 1 : num)

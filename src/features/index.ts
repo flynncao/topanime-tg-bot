@@ -1,8 +1,9 @@
 import type { InputMediaPhoto } from 'grammy/types'
 import TopAnimeScrape from './scrape.js'
 import type { MyContext } from '#root/types/bot.js'
+import store from '#root/databases/store.js'
 
-export default async function showTopAnime(ctx: MyContext) {
+export default async function showTopAnime() {
   const data = await TopAnimeScrape()
   let caption = ``
   const imgs: InputMediaPhoto[] = []
@@ -22,5 +23,5 @@ export default async function showTopAnime(ctx: MyContext) {
   imgs[0].caption = caption
   imgs[0].parse_mode = 'HTML'
 
-  ctx.replyWithMediaGroup(imgs)
+  store.bot!.api.sendMediaGroup(store.env!.user_chat_id!, imgs)
 }
