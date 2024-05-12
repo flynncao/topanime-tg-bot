@@ -38,22 +38,17 @@ async function init() {
     const { env } = store
     if (env === null)
       return
-    // await connectMongodb()
     const bot = new Bot<MyContext>(env.bot_token)
     store.bot = bot
     store.bot.api.config.use(autoRetry())
     await bot.api.setMyCommands(commandList)
-    // Register handlers and menus...
     registerMiddlewares()
     createAllConversations()
     createAllMenus()
     registerCommandHandler()
     registerMessageHandler()
-    // Set error handler
     setErrorHandler(bot)
-    // Set cron tasks
-    initCrons()
-    // Start bot
+    // initCrons()
     bot.start()
     Logger.logSuccess('Bot started')
   }

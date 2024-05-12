@@ -4,7 +4,7 @@ View seasonal weekly anime charts, news, articles and more in your Telegram chat
 
 ## Features
 
-![](./docs/assets/preview.png)
+![](./docs/assets/topanime.png)
 
 
 

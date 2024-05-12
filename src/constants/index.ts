@@ -5,6 +5,7 @@ export const commandList: Command[] = [
   { command: 'help', description: 'Show help text' },
   { command: 'settings', description: 'Open settings' },
   { command: 'about', description: 'Show information about the bot' },
-  { command: 'wallpaper', description: 'Show random wallpaper' },
-  { command: 'email', description: 'Send email to someone' },
+  { command: 'topanime', description: 'Show weekly anime ranking' },
+  { command: 'topwaifu', description: 'Show weekly female characters ranking' },
+  { command: 'tophusbando', description: 'Show weekly male characters ranking' },
 ]

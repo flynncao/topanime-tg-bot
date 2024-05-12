@@ -22,5 +22,12 @@ export default function registerCommandHandler() {
     showTopAnime(ctx)
   })
 
+  bot.command('topwaifu', async (ctx: MyContext) => {
+    ctx.reply('Under construction!')
+  })
+
+  bot.command('tophusbando', async (ctx: MyContext) => {
+    ctx.reply('Under construction!')
+  })
   Logger.logSuccess('Command handler registered')
 }
